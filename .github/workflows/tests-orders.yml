@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: tests-orders
+
+# Controls when the workflow will run
+on:
+  pull_request:
+      paths:
+      - 'tickets/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd orders && npm install && npm run test:ci
