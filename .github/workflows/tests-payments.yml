@@ -4,8 +4,9 @@ name: tests-payments
 
 # Controls when the workflow will run
 on:
-  pull_request
-
+  pull_request:
+      paths:
+      - 'payments/**'
 jobs:
   build:
     runs-on: ubuntu-latest
