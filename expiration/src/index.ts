@@ -4,6 +4,7 @@ import { natsWrapper } from "./nats-wrapper";
 
 const start = async () => {
   
+  console.log('STARTING.....');
   if (!process.env.NATS_URL) {
     throw new Error("NATS_URL must be defined");
   }
